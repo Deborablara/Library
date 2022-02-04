@@ -12,7 +12,7 @@
 </head>
 <body>
     <div class="img">
-        <img src="../img/livros.jpeg" alt="livros">
+        <img src="../img/livro.jpeg" alt="livros">
     </div>
 
     <main class="flex-container">
