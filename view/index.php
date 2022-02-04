@@ -31,16 +31,7 @@
 
         <form method="POST" action="../model/controleLivros.php">
 
-            <div class="input-30">
-                <div>
-                    <label for="codigo">Código</label>
-                </div>
-                <div>
-                    <input type="number" name="codigo" id="codigo">
-                </div>
-            </div>
-
-            <div class="input-65">
+            <div class="input-100">
                 <div>
                     <label for="nome">Nome</label>
                 </div>
@@ -59,7 +50,7 @@
             </div>
 
             <div class="div-button">
-                <button type="submit" name="opcao" value="cadastrar">Cadastrar</button>
+                <button type="submit" name="opcao" value="cadastrar" class="cadastrar">Cadastrar</button>
             </div>
 
         </form>

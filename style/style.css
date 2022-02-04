@@ -28,10 +28,39 @@
     }
     
     .flex-container {
-        padding: 2rem;
         width: 75vw;
-        height: 100vh;
-        margin-top: 1rem;
+        height: 100%;
+        padding: 2rem;
+    }
+    
+    .flex-container table {
+        width: 100%;
+        text-align: left;
+        padding: 2rem;
+        border-spacing: 0;
+        border-radius: 2%;
+    }
+    
+    .button-editar {
+        background-color: #555;
+        color: #FAF7FD;
+        text-decoration: none;
+        padding: 0.5rem;
+        border-radius: 3%;
+    }
+    
+    td,
+    th {
+        border-top: 1px solid lightgray;
+        padding: 1rem;
+    }
+    
+    tr:nth-child(even) {
+        background: rgba(85, 85, 85, 0.082);
+    }
+    
+    .h1 {
+        color: blueviolet;
     }
     
     form {
@@ -79,14 +108,27 @@
     
     .div-button button {
         border-radius: 3px;
-        width: 30%;
+        width: 20%;
         padding: 1rem;
         float: right;
-        background-color: #202020;
         font-size: 16px;
         color: white;
         font-weight: 600;
         border-style: none;
+    }
+    
+    .cadastrar,
+    .cancelar {
+        background-color: #202020;
+    }
+    
+    .atualizar {
+        background-color: rgb(71, 204, 160);
+        margin: 0 5px;
+    }
+    
+    .excluir {
+        background-color: rgba(245, 3, 3, 0.808);
     }
     
     .div-button button:hover {
@@ -132,7 +174,7 @@
             text-align: center;
         }
         .flex-container {
-            width: 100%;
+            width: 95%;
         }
         .flex-container .input-30,
         .flex-container .input-65 {
@@ -146,5 +188,23 @@
         }
         h1 {
             text-align: center;
+            font-size: 16px;
+        }
+        table thead {
+            display: none;
+        }
+        table tbody td {
+            display: flex;
+            flex-direction: column;
+        }
+        td,
+        th {
+            padding: 1rem;
+        }
+        .button-editar {
+            text-align: center;
+        }
+        .atualizar {
+            margin: 5px 0;
         }
     }
