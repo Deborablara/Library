@@ -11,50 +11,45 @@
     <title>Cadastro de Livros</title>
 </head>
 <body>
-
-    <header class="flex">
-        <div class="logo">
-            <img src="../img/images-removebg-preview.png" alt="logo site">
-        </div>
-        
+    <div class="img">
+        <img src="../img/livros.jpeg" alt="livros">
+    </div>
+    <main class="flex-container">
         <nav>
             <ul>
-                <li class="active"><a href="index.php">Cadastrar Livros</a></li>
-                <li><a href="listarLivros.php">Listar livros</a></li>
+                <li><a href="./listarLivros.php">Livros cadastrados</a></li>
+                <li><a class="active" href="./index.php">Cadastrar livro</a></li>
+ 
             </ul>
         </nav>
-    </header>
+       
+        <div class="div-form">
+            <h1>Cadastrar Livro</h1>
 
-    <main class="flex-container">
+            <form method="POST" action="../model/controleLivros.php">
 
-        <h1>Cadastrar Livro</h1>
-
-        <form method="POST" action="../model/controleLivros.php">
-
-            <div class="input-100">
-                <div>
+                <div class="input-100">
                     <label for="nome">Nome</label>
-                </div>
-                <div>
+                    <br>
                     <input type="text" name="nome" id="nome">
                 </div>
-            </div>
 
-            <div class="input-100">
-                <div>
+                <div class="input-100">
                     <label for="autor">Nome do Autor</label>
-                </div>
-                <div>
+                    <br>
                     <input type="text" name="autor" id="autor">
                 </div>
-            </div>
 
-            <div class="div-button">
-                <button type="submit" name="opcao" value="cadastrar" class="cadastrar">Cadastrar</button>
-            </div>
+                <div class="div-button">
+                    <button type="submit" name="opcao" value="cadastrar">Cadastrar</button>
+                </div>
 
-        </form>
+            </form>
 
+
+        </div>
+
+        
     </main>
     
     

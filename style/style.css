@@ -6,31 +6,66 @@
     }
     
     body {
-        background-color: #FAF7FD;
+        background-color: #000000;
+        color: #FAF7FD;
+        width: 100vw;
+        height: 100vh;
         display: flex;
-        flex-direction: row;
     }
     
-    header {
-        width: 25vw;
-        height: 100vh;
-        background-color: #202020;
+    body div {
+        width: 40%;
+        height: 100%;
+    }
+    
+    div img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    body .flex-container {
+        width: 60%;
+        height: 100%;
         display: flex;
         flex-direction: column;
     }
     
-    header .logo {
-        margin-top: -25px;
-        margin-bottom: 15px;
+    .flex-container nav {
         width: 100%;
-        height: 10vh;
-        text-align: center;
+        height: 10%;
+        background-color: #202020;
     }
     
-    .flex-container {
-        width: 75vw;
+    nav ul {
+        width: 100%;
         height: 100%;
-        padding: 2rem;
+        background-color: #202020;
+        list-style-type: none;
+    }
+    
+    ul li {
+        width: 25%;
+        height: 100%;
+        float: right;
+    }
+    
+    li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+    
+    .active {
+        border-bottom: 4px solid #FAF7FD;
+        background-color: #111;
+    }
+    
+    li a:hover {
+        background-color: #111;
     }
     
     .flex-container table {
@@ -41,9 +76,24 @@
         border-radius: 2%;
     }
     
+    .flex-container .div-form {
+        width: 100%;
+        padding: 2rem;
+    }
+    
+    .div-form input {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        border-radius: 1%;
+        border-style: none;
+        width: 100%;
+        padding: 1rem;
+        background-color: #FAF7FD;
+    }
+    
     .button-editar {
-        background-color: #555;
-        color: #FAF7FD;
+        background-color: #FAF7FD;
+        color: #000000;
         text-decoration: none;
         padding: 0.5rem;
         border-radius: 3%;
@@ -55,34 +105,12 @@
         padding: 1rem;
     }
     
-    tr:nth-child(even) {
-        background: rgba(85, 85, 85, 0.082);
-    }
-    
-    .h1 {
-        color: blueviolet;
-    }
-    
-    form {
-        padding: 3rem;
-    }
-    
-    .flex-container .input-30 {
-        width: 30%;
-        float: left;
-    }
-    
-    .flex-container .input-65 {
-        width: 65%;
-        float: left;
-        margin-left: 5%;
-    }
-    
     .flex-container label {
         font-size: 18px;
     }
     
     .flex-container h1 {
+        padding: 2rem;
         font-size: 40px;
     }
     
@@ -91,35 +119,24 @@
         float: left;
     }
     
-    input {
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-        border-radius: 1%;
-        border-style: none;
-        width: 100%;
-        padding: 1rem;
-        background-color: rgba(85, 85, 85, 0.082);
-    }
-    
     .flex-container .div-button {
-        margin-top: 2rem;
+        text-align: center;
         width: 100%;
     }
     
     .div-button button {
+        margin-top: 3rem;
         border-radius: 3px;
-        width: 20%;
+        width: 30%;
         padding: 1rem;
-        float: right;
         font-size: 16px;
-        color: white;
         font-weight: 600;
         border-style: none;
     }
     
-    .cadastrar,
-    .cancelar {
-        background-color: #202020;
+    .div-button button:hover {
+        background-color: #111;
+        color: #FAF7FD
     }
     
     .atualizar {
@@ -131,64 +148,41 @@
         background-color: rgba(245, 3, 3, 0.808);
     }
     
-    .div-button button:hover {
-        background-color: #555;
-    }
-    
-    header ul {
-        list-style-type: none;
-        margin: 0;
-        padding-top: 5rem;
-        width: 100%;
-    }
-    
-    li a {
-        display: block;
-        color: white;
-        padding: 1rem 2rem;
-        text-decoration: none;
-        font-size: 20px;
-        font-weight: 500;
-    }
-    
-    li a:hover,
-    .active {
-        background-color: #555;
-        color: white;
-    }
-    
-    .active {
-        border-left: 4px solid #FAF7FD;
-    }
-    
     @media (max-width: 850px) {
+        .img {
+            display: none;
+        }
         body {
+            width: 100vw;
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
         }
-        header {
+        body .flex-container {
             width: 100%;
-            height: 50vh;
         }
-        ul {
+        .flex-container nav {
+            height: 40%;
+            width: 100%;
+        }
+        nav ul {
+            width: 100%;
             text-align: center;
+            display: flex;
+            flex-direction: column;
         }
-        .flex-container {
-            width: 95%;
-        }
-        .flex-container .input-30,
-        .flex-container .input-65 {
+        ul li {
             width: 100%;
         }
-        .flex-container .input-65 {
-            margin-left: 0%;
+        li a {
+            width: 100%;
         }
         .div-button button {
+            margin-top: 1rem;
             width: 100%;
         }
-        h1 {
+        .flex-container h1 {
             text-align: center;
-            font-size: 16px;
+            font-size: 20px;
         }
         table thead {
             display: none;

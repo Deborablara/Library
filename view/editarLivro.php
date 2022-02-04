@@ -8,65 +8,57 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
-    <title>Cadastro de Livros</title>
+    <title>Editar</title>
 </head>
 <body>
-
-    <header class="flex">
-        <div class="logo">
-            <img src="../img/images-removebg-preview.png" alt="logo site">
-        </div>
-        
-        <nav>
-            <ul>
-                <li ><a href="index.php">Cadastrar Livros</a></li>
-                <li><a href="listarLivros.php">Listar livros</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="img">
+        <img src="../img/livros.jpeg" alt="livros">
+    </div>
 
     <main class="flex-container">
-
+        <nav>
+            <ul>
+                <li><a href="./listarLivros.php">Livros cadastrados</a></li>
+                <li><a  href="./index.php">Cadastrar livro</a></li>
+ 
+            </ul>
+        </nav>
         <h1>Editar</h1>
-        <?php
-            include '../control/crudLivro.php';
+        <div class="div-form">
 
-            $codigo = $_GET["codigo"];
-            $resultado = mostrarLivroAlterar($codigo);
-            $resultadoSeparado=mysqli_fetch_assoc($resultado);
+            <?php
+                include '../control/crudLivro.php';
 
-        ?>
+                $codigo = $_GET["codigo"];
+                $resultado = mostrarLivroAlterar($codigo);
+                $resultadoSeparado=mysqli_fetch_assoc($resultado);
 
-        <form method="POST" action="../model/controleLivros.php">
+            ?>
 
-            <div class="input-65">
-                <div>
-                    <label for="nome">Nome</label>
+            <form method="POST" action="../model/controleLivros.php">
+
+                <div class="input-100">
+
+                        <label for="nome">Nome</label>
+                        <br>
+                        <input type="text" name="nome" id="nome"value="<?php echo $resultadoSeparado['nome'];?>" >
+
                 </div>
-                <div>
-                    <input type="text" name="nome" id="nome"value="<?php echo $resultadoSeparado['nome'];?>" >
+                <div class="input-100">
+                        <label for="autor">Nome do Autor</label>
+                        <br>
+                        <input type="text" name="autor" id="autor" value="<?php echo $resultadoSeparado['autor'];?>">
                 </div>
-            </div>
+                <input type="hidden" name="codigo" value="<?php echo $resultadoSeparado['codigo'] ?>">
 
-            <div class="input-100">
-                <div>
-                    <label for="autor">Nome do Autor</label>
+                <div class="div-button">
+                    <button type="submit" name="opcao" value="cancelar">Cancelar</button>
+                    <button type="submit" name="opcao" value="atualizar" class="atualizar">Atualizar</button>
+                    <button type="submit" name="opcao" value="excluir" class="excluir">Excluir</button>
+                    
                 </div>
-                <div>
-                    <input type="text" name="autor" id="autor" value="<?php echo $resultadoSeparado['autor'];?>">
-                </div>
-            </div>
-            <input type="hidden" name="codigo" value="<?php echo $resultadoSeparado['codigo'] ?>">
-
-            <div class="div-button">
-                <button type="submit" name="opcao" value="cancelar" class="cancelar">Cancelar</button>
-                <button type="submit" name="opcao" value="atualizar" class="atualizar">Atualizar</button>
-                <button type="submit" name="opcao" value="excluir" class="excluir">Excluir</button>
-                
-            </div>
-
-        </form>
-
+            </form>
+        </div>
     </main>
     
     

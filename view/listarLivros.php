@@ -11,24 +11,20 @@
     <title>Livros cadastrados</title>
 </head>
 <body>
-
-    <header class="flex">
-        <div class="logo">
-            <img src="../img/images-removebg-preview.png" alt="logo site">
-        </div>
-        
-        <nav>
-            <ul>
-                <li ><a href="index.php">Cadastrar Livros</a></li>
-                <li class="active"><a href="listarLivros.php">Listar livros</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="img">
+        <img src="../img/livros.jpeg" alt="livros">
+    </div>
 
     <main class="flex-container">
+        <nav>
+            <ul>
+                <li><a class="active"  href="./listarLivros.php">Livros cadastrados</a></li>
+                <li><a href="./index.php">Cadastrar livro</a></li>
+ 
+            </ul>
+        </nav>
         <h1>Livros cadastrados</h1>
 
-        <div>
             <table>
                 <thead>
                     <tr>
@@ -62,7 +58,6 @@
                     ?>
                 </tbody>
             </table>
-        </div>
 
     </main>
 
