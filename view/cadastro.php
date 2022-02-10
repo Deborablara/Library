@@ -30,7 +30,11 @@
                     <br>
                     <input type="text" name="autor" id="autor" placeholder="autor" required>
 
-                    <button type="submit" name="opcao" value="cadastrar">Cadastrar</button>
+                    <section>
+                        <a href="./index.php">Voltar</a>
+                        <button type="submit" name="opcao" value="cadastrar">Cadastrar</button>
+                    </section>
+                    
 
             </form>
 

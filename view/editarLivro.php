@@ -7,24 +7,22 @@
     <link rel="stylesheet" href="../style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
-    <title>Editar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/6fb5f06b55.js" crossorigin="anonymous"lefer></script>
+
+    
+    <title>Library</title>
 </head>
 <body>
-    <div class="img">
-        <img src="../img/livro.jpeg" alt="livros">
-    </div>
+
+    <header>
+        <h1>My Library</h1>
+    </header>
 
     <main class="flex-container">
-        <nav>
-            <ul>
-                <li><a href="./listarLivros.php">Livros cadastrados</a></li>
-                <li><a  href="./index.php">Cadastrar livro</a></li>
- 
-            </ul>
-        </nav>
-        <h1>Editar</h1>
-        <div class="div-form">
+
+        <h2>Editar</h2>
 
             <?php
                 include '../control/crudLivro.php';
@@ -37,30 +35,21 @@
 
             <form method="POST" action="../model/controleLivros.php">
 
-                <div class="input-100">
-
-                        <label for="nome">Nome</label>
-                        <br>
-                        <input type="text" name="nome" id="nome"value="<?php echo $resultadoSeparado['nome'];?>" >
-
-                </div>
-                <div class="input-100">
-                        <label for="autor">Nome do Autor</label>
-                        <br>
-                        <input type="text" name="autor" id="autor" value="<?php echo $resultadoSeparado['autor'];?>">
-                </div>
+                <input type="text" name="nome" id="nome"value="<?php echo $resultadoSeparado['nome'];?>" >
+                <br>
+                <input type="text" name="autor" id="autor" value="<?php echo $resultadoSeparado['autor'];?>">
+                
                 <input type="hidden" name="codigo" value="<?php echo $resultadoSeparado['codigo'] ?>">
 
-                <div class="div-button">
+                <section class="botoes">
                     <button type="submit" name="opcao" value="cancelar">Cancelar</button>
                     <button type="submit" name="opcao" value="atualizar" class="atualizar">Atualizar</button>
                     <button type="submit" name="opcao" value="excluir" class="excluir">Excluir</button>
                     
-                </div>
+                </section>
             </form>
-        </div>
+
     </main>
-    
     
 </body>
 </html>

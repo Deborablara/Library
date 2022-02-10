@@ -8,7 +8,7 @@
         case 'cadastrar':
 
             cadastrarLivro($_POST["nome"], $autor = $_POST["autor"]);
-            header("Location: ../view/index.php");
+            header("Location: ../view/cadastro.php");
         break;
 
         case 'cancelar':

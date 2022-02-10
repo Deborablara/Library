@@ -23,13 +23,13 @@
     <main class="flex-container">
 
         <section class="card">
-            <a href="./view/cadastro.php" class="link-card"><i class="fa-solid fa-plus"></i></a>
-            <a href="./view/cadastro.php" class="link-card"><p>Cadastrar Livro</p></a>
+            <a href="./cadastro.php" class="link-card"><i class="fa-solid fa-plus"></i></a>
+            <a href="./cadastro.php" class="link-card"><p>Cadastrar Livro</p></a>
         </section>
 
         <section class="card">
-            <a href="./view/listarLivros.php" class="link-card"><i class="fa-solid fa-list" id="list"></i></a>
-            <a href="./view/listarLivros.php" class="link-card"><p>Listar Livros</p></a>
+            <a href="./listarLivros.php" class="link-card"><i class="fa-solid fa-list" id="list"></i></a>
+            <a href="./listarLivros.php" class="link-card"><p>Listar Livros</p></a>
         </section>
 
     </main>

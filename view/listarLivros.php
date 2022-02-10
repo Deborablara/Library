@@ -21,6 +21,7 @@
     </header>
 
     <main class="flex-container">
+ 
         <section>
             <table>
                 <caption>Livros Cadastrados</caption>
@@ -57,6 +58,7 @@
                 </tbody>
             </table>
         </section>
+        <a href="./index.php">Voltar</a>
     </main>
     
 </body>
