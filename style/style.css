@@ -1,204 +1,173 @@
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: 'Montserrat', sans-serif;
-    }
-    
-    body {
-        background-color: #000000;
-        color: #FAF7FD;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-    }
-    
-    body div {
-        width: 40%;
-        height: 100%;
-    }
-    
-    div img {
-        width: 100%;
-        height: 100%;
-    }
-    
-    body .flex-container {
-        width: 60%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .flex-container nav {
-        width: 100%;
-        height: 10%;
-        background-color: #202020;
-    }
-    
-    nav ul {
-        width: 100%;
-        height: 100%;
-        background-color: #202020;
-        list-style-type: none;
-    }
-    
-    ul li {
-        width: 25%;
-        height: 100%;
-        float: right;
-    }
-    
-    li a {
-        display: block;
-        width: 100%;
-        height: 100%;
-        color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-    }
-    
-    .active {
-        border-bottom: 4px solid #FAF7FD;
-        background-color: #111;
-    }
-    
-    li a:hover {
-        background-color: #111;
-    }
-    
-    .flex-container table {
-        width: 100%;
-        text-align: left;
-        padding: 2rem;
-        border-spacing: 0;
-        border-radius: 2%;
-    }
-    
-    .flex-container .div-form {
-        width: 100%;
-        padding: 2rem;
-    }
-    
-    .div-form input {
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-        border-radius: 1%;
-        border-style: none;
-        width: 100%;
-        padding: 1rem;
-        background-color: #FAF7FD;
-    }
-    
-    .button-editar {
-        background-color: #FAF7FD;
-        color: #000000;
-        text-decoration: none;
-        padding: 0.5rem;
-        border-radius: 3%;
-    }
-    
-    td,
-    th {
-        border-top: 1px solid lightgray;
-        padding: 1rem;
-    }
-    
-    .flex-container label {
-        font-size: 18px;
-    }
-    
-    .flex-container h1 {
-        padding: 2rem;
-        font-size: 40px;
-    }
-    
-    .flex-container .input-100 {
-        width: 100%;
-        float: left;
-    }
-    
-    .flex-container .div-button {
-        text-align: center;
-        width: 100%;
-    }
-    
-    .div-button button {
-        margin-top: 3rem;
-        border-radius: 3px;
-        width: 30%;
-        padding: 1rem;
-        font-size: 16px;
-        font-weight: 600;
-        border-style: none;
-    }
-    
-    .div-button button:hover {
-        background-color: #111;
-        color: #FAF7FD
-    }
-    
-    .atualizar {
-        background-color: rgb(71, 204, 160);
-        margin: 0 5px;
-    }
-    
-    .excluir {
-        background-color: rgba(245, 3, 3, 0.808);
-    }
-    
-    @media (max-width: 850px) {
-        .img {
-            display: none;
-        }
-        body {
-            width: 100vw;
-            display: flex;
-            flex-direction: column;
-        }
-        body .flex-container {
-            width: 100%;
-        }
-        .flex-container nav {
-            height: 40%;
-            width: 100%;
-        }
-        nav ul {
-            width: 100%;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-        }
-        ul li {
-            width: 100%;
-        }
-        li a {
-            width: 100%;
-        }
-        .div-button button {
-            margin-top: 1rem;
-            width: 100%;
-        }
-        .flex-container h1 {
-            text-align: center;
-            font-size: 20px;
-        }
-        table thead {
-            display: none;
-        }
-        table tbody td {
-            display: flex;
-            flex-direction: column;
-        }
-        td,
-        th {
-            padding: 1rem;
-        }
-        .button-editar {
-            text-align: center;
-        }
-        .atualizar {
-            margin: 5px 0;
-        }
-    }
+:root{
+    --branco: #fafafa;
+    --azul: #020024;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: var(--branco);
+}
+
+body header{
+    background: var(--azul);
+    color: var(--branco);
+    width: 100%;
+    height: 12vh;
+    text-align: center;
+    padding: 1rem;
+    font-size: 20px;
+}
+
+body main  {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 70%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+body main  .card{
+    width: 45%;
+    height: 35%;
+    border-radius: 30px;
+    box-shadow: 5px 2px 1em rgba(4, 45, 53, 0.212);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    align-items: center;
+}
+
+body main .card i{
+    width: 80px;
+    height: 80px;
+    font-size: 4rem;
+    background: var(--azul);
+    color: var(--branco);
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float:left;
+}
+
+#list{
+    background: var(--branco);
+    color: var(--azul);
+}
+
+body main .card p{
+    font-size: 2em;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 500;
+
+}
+
+body main h2{
+    font-size: 3em;
+
+}
+
+body main form{
+    width: 50%;
+    height: 60%;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+body main form input{
+    margin-top: 8px;
+    width: 100%;
+    padding: 1rem;
+    background: #02002407;
+    border:none;
+    border-bottom: 1px solid var(--azul);
+    border-radius: 3px;
+    outline: none;
+}
+
+body main form input::placeholder {
+    font-size: 1.3em;
+}
+
+body main form button{
+    width: 60%;
+    padding: 0.8rem;
+    background: var(--azul);
+    color: var(--branco);
+    border:none;
+    border-radius: 3px;
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 3rem;
+
+}
+
+body main section{
+    width: 100%;
+    height: 60vh;
+}
+
+body main section table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+body main section table caption{
+    margin-bottom: 3rem;
+    width: 100%;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+body main section table th{
+    font-size: 20px;
+
+}
+
+body main section table tr {
+    text-align: center;
+
+    width: 100%;
+}
+
+tr:nth-child(even) {
+    background: #02002407;
+}
+
+body main section table td{
+    padding: 0.5rem;
+
+}
+
+body main section table td a{
+    background: var(--azul);
+    color: var(--branco);
+    padding: 0.3rem;
+    border-radius: 3px;
+}
+
+a{
+    text-decoration: none;
+
+}
+.link-card{
+    color: var(--azul);
+}
+  

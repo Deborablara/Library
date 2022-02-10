@@ -7,25 +7,23 @@
     <link rel="stylesheet" href="../style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
-    <title>Livros cadastrados</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600&display=swap" rel="stylesheet">
+    
+    <script src="https://kit.fontawesome.com/6fb5f06b55.js" crossorigin="anonymous"lefer></script>
+
+    
+    <title>Library</title>
 </head>
 <body>
-    <div class="img">
-        <img src="../img/livro.jpeg" alt="livros">
-    </div>
+
+    <header>
+        <h1>My Library</h1>
+    </header>
 
     <main class="flex-container">
-        <nav>
-            <ul>
-                <li><a class="active"  href="./listarLivros.php">Livros cadastrados</a></li>
-                <li><a href="./index.php">Cadastrar livro</a></li>
- 
-            </ul>
-        </nav>
-        <h1>Livros cadastrados</h1>
-
+        <section>
             <table>
+                <caption>Livros Cadastrados</caption>
                 <thead>
                     <tr>
                         <th>Código</th>
@@ -58,12 +56,8 @@
                     ?>
                 </tbody>
             </table>
-
+        </section>
     </main>
-
-
-
-    
     
 </body>
 </html>
