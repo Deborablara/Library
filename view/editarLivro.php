@@ -35,9 +35,9 @@
 
             <form method="POST" action="../model/controleLivros.php">
 
-                <input type="text" name="nome" id="nome"value="<?php echo $resultadoSeparado['nome'];?>" >
+                <input type="text" name="nome" id="nome"value="<?php echo $resultadoSeparado['nome'];?>" required>
                 <br>
-                <input type="text" name="autor" id="autor" value="<?php echo $resultadoSeparado['autor'];?>">
+                <input type="text" name="autor" id="autor" value="<?php echo $resultadoSeparado['autor'];?>" required>
                 
                 <input type="hidden" name="codigo" value="<?php echo $resultadoSeparado['codigo'] ?>">
 
